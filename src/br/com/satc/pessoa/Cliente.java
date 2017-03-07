@@ -10,19 +10,44 @@ package br.com.satc.pessoa;
  * @author Markson
  */
 public class Cliente extends Pessoa {
+    
+            private float renda;
+            private String logradouro;
 
-    public Cliente(String nome, String rg, String cpf) {
+
+    public Cliente(String nome, String rg, String cpf, String logradouro, float renda) {
         super(nome, rg, cpf);
+        this.setLogradouro(logradouro);
+        this.setRenda(renda);
+        
+    }    
+        
+    public String retornaDados(String vlt) {
+        vlt = "Dados:\nNome: " + getNome() + "\nRG: " + getRg() + "\nCpf: " + getCpf() + "\nLogradouro: " + getLogradouro() + "\nRenda: " + getRenda();
+        return vlt;   
     }
 
     @Override
-    public String retornaDados() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void AlteraNome(String nome) {
+        this.setNome(nome);
     }
 
-    @Override
-    public void AlteraNome() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double getRenda() {
+        return renda;
     }
+
+    public void setRenda(float renda) {
+        this.renda = renda;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+ 
     
 }
