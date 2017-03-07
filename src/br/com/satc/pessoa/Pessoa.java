@@ -10,12 +10,14 @@ package br.com.satc.pessoa;
  * @author Markson
  */
 public abstract class Pessoa implements IPessoa {
-    private String nome, rg, cpf;
-    
-    Pessoa(String nome, String rg, String cpf){
+    private String nome, rg, cpf, logradouro;
+    private float renda;
+    Pessoa(String nome, String rg, String cpf, String logradouro, float renda){
         this.setNome(nome);
         this.setCpf(cpf);
         this.setRg(rg);
+        this.setLogradouro(logradouro);
+        this.setRenda(renda);
     }
 
     /**
@@ -58,6 +60,34 @@ public abstract class Pessoa implements IPessoa {
      */
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    /**
+     * @return the logradouro
+     */
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    /**
+     * @param logradouro the logradouro to set
+     */
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    /**
+     * @return the renda
+     */
+    public float getRenda() {
+        return renda;
+    }
+
+    /**
+     * @param renda the renda to set
+     */
+    public void setRenda(float renda) {
+        this.renda = renda;
     }
     
 }
