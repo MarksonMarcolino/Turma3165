@@ -7,10 +7,10 @@ package br.com.satc.pessoa;
 
 /**
  *
- * @author Markson
+ * @author Vinícius
  */
 public interface IPessoa {
     public String retornaDados();
-    public void AlteraNome();
+    public void AlteraNome(String novoNome);
     
 }

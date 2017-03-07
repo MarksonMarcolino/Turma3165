@@ -7,7 +7,7 @@ package br.com.satc.pessoa;
 
 /**
  *
- * @author Markson
+ * @author Vinícius
  */
 public abstract class Pessoa implements IPessoa {
     private String nome, rg, cpf;
