@@ -11,18 +11,22 @@ package br.com.satc.pessoa;
  */
 public class Cliente extends Pessoa {
 
-    public Cliente(String nome, String rg, String cpf) {
+    public Cliente(String nome, String rg, String cpf,float renda,String logradouro) {
         super(nome, rg, cpf);
+        this.setLogradouro(logradouro);
+        this.setRenda(renda);
     }
 
     @Override
     public String retornaDados() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         return "Nome: "+this.getNome()+".\n RG: "+this.getRg()+".\n CPF: "
+         +this.getCpf()+".\n Renda: "+this.getRenda()+
+         ". \n Logradouro: "+ this.getLogradouro()+".";
     }
 
     @Override
-    public void AlteraNome() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void AlteraNome(String Nome) {
+        this.setNome(Nome);
     }
     
 }
