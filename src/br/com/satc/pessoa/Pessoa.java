@@ -16,6 +16,7 @@ public abstract class Pessoa implements IPessoa {
         this.setNome(nome);
         this.setCpf(cpf);
         this.setRg(rg);
+
     }
 
     /**

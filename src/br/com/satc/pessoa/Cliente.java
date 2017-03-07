@@ -1,28 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.satc.pessoa;
 
-/**
- *
- * @author Markson
- */
 public class Cliente extends Pessoa {
 
-    public Cliente(String nome, String rg, String cpf) {
+    public Cliente(String nome, String rg, String cpf, String logradouro, double renda) {
         super(nome, rg, cpf);
+        this.setLogradouro(logradouro);
+        this.setRenda(renda);
     }
-
+    private String logradouro;
+    private double renda;
+    
     @Override
     public String retornaDados() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String volta;
+        volta="Dados: "+getNome()+ ", "+getRg()+ ", "+getCpf()+ ", "+getLogradouro()+ ", "+getRenda();
+        return volta;
     }
 
     @Override
-    public void AlteraNome() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void AlteraNome(String i) {
+        this.setNome(i);
     }
-    
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public double getRenda() {
+        return renda;
+    }
+
+    public void setRenda(double renda) {
+        this.renda = renda;
+    }
 }
