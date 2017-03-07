@@ -9,7 +9,7 @@ package br.com.satc.pessoa;
  *
  * @author Markson
  */
-public class Cliente extends Pessoa {
+public class Cliente extends Pessoa { 
      
     
     public Cliente(String nome, String rg, String cpf, String logradouro, float renda) {
