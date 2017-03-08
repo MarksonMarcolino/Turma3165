@@ -13,6 +13,8 @@ public abstract class Pessoa implements IPessoa {
     private String nome, rg, cpf;
     
     Pessoa(String nome, String rg, String cpf){
+        
+        
         this.setNome(nome);
         this.setCpf(cpf);
         this.setRg(rg);
